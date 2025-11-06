@@ -1,0 +1,13 @@
+{
+  "name": "carolburri/polylang-deepl-translator",
+  "description": "Automatic translation from German to English using DeepL API for Polylang",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Carol Burri",
+      "email": "mail@carolburri.com"
+    }
+  ],
+  "require": {}
+}
