@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Polylang DeepL Auto Translator
- * Plugin URI: https://example.com
+ * Plugin URI: https://github.com/carolburri/polylang-deepl-translator
  * Description: Automatic translation from German to English using DeepL API for Polylang
  * Version: 1.2.2
  * Author: Carol Burri
@@ -100,11 +100,13 @@ class Polylang_DeepL_Translator {
                 <li>✓ DeepL API key (free tier: 500,000 characters/month)</li>
             </ul>
             
-            <h2>Troubleshooting</h2>
+            <h2>Features</h2>
             <ul>
-                <li><strong>Don't see the translation box?</strong> Make sure you're editing a German (de) post/page</li>
-                <li><strong>Translation button not working?</strong> Check that your API key is correct</li>
-                <li><strong>Using Gutenberg?</strong> The box appears in the right sidebar (you may need to scroll)</li>
+                <li>✓ Translates post title, content, and excerpt</li>
+                <li>✓ Translates custom Gutenberg block attributes</li>
+                <li>✓ Supports custom fields (with checkbox selection)</li>
+                <li>✓ Handles nested arrays and complex data structures</li>
+                <li>✓ Works with both free and pro DeepL API keys</li>
             </ul>
         </div>
         <?php
@@ -589,8 +591,8 @@ class Polylang_DeepL_Translator {
             $text = $image['text'] ?? '';
             
             $html .= '<div class="image-item">';
-            $html .= '<img src="' . esc_attr($url) . '" alt="' . esc_attr($text) . '"/>';
-            $html .= '<div class="text"><span>' . esc_html($text) . '</span></div>';
+            $html .= '<img src="' . $url . '" alt="' . $text . '"/>';
+            $html .= '<div class="text"><span>' . $text . '</span></div>';
             $html .= '</div>';
         }
         
@@ -798,3 +800,4 @@ class Polylang_DeepL_Translator {
 
 // Initialize plugin
 new Polylang_DeepL_Translator();
+
