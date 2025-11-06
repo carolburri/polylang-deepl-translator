@@ -706,8 +706,9 @@ class Polylang_DeepL_Translator {
     private function should_translate_inner_html($block_name) {
         // Only translate innerHTML for core blocks that don't have innerBlocks
         $core_blocks = [
-            'core/paragraph', 'core/heading', 'core/list', 'core/quote',
-            'core/pullquote', 'core/verse', 'core/preformatted'
+            'core/paragraph', 'core/heading', 'core/quote',
+            'core/pullquote', 'core/verse', 'core/preformatted',
+            'core/list-item' // List items need innerHTML translation
         ];
         
         return in_array($block_name, $core_blocks);
